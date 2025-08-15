@@ -1,0 +1,66 @@
+@use "../../abstracts/mixsins";
+@use "../../abstracts/variables";
+@use "sass:map";
+
+.nav {
+  padding: 12px 18px;
+  @include mixsins.flex-box(row, space-between, center, wrap, 20px);
+
+  &-icon {
+    width: 70%;
+    display: none;
+    .caption {
+      @include mixsins.flex-box(row, start, center);
+      :nth-child(1) {
+        color: map.get(variables.$them-color, warning);
+      }
+      :nth-child(2) {
+        color: map.get(variables.$them-color, primary);
+      }
+    }
+    .image {
+      width: 28px;
+      height: 30px;
+    }
+    @include mixsins.response-to("desktop") {
+      @include mixsins.flex-box(row, start, center, false, 12px);
+    }
+  }
+  &-title {
+    width: 100%;
+    order: 3;
+    flex: 1 1 100%;
+    @include mixsins.flex-box(row, center, center);
+
+    .map-image {
+      width: 14px;
+      height: 25px;
+      margin: 0px 9px;
+    }
+    :nth-child(1),
+    :nth-child(4) {
+      color: variables.$gray-800;
+    }
+    :nth-child(3) {
+      color: variables.$gray-800;
+      font-weight: 400;
+      padding-right: 4px;
+    }
+    @include mixsins.response-to("desktop") {
+      order: 0;
+      flex: 0 1 auto;
+    }
+  }
+  &-btn {
+    width: 100%;
+    @include mixsins.flex-box(row, end, center, false, 15px);
+
+    @include mixsins.response-to("desktop") {
+      width: 70%;
+    }
+  }
+  @include mixsins.response-to("desktop") {
+    padding: 14px;
+    flex-wrap: nowrap;
+  }
+}

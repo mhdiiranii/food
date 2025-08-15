@@ -1,0 +1,36 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixsins";
+
+.search {
+  @include mixsins.flex-box(row, start, center, false, 10px);
+  position: relative;
+  //   background-color: aquamarine;
+  overflow: none;
+  height: 30px;
+  width: 100%;
+  transition: 800ms cubic-bezier(0.19, 0.78, 0.43, 1.1);
+
+  &:focus-within {
+    width: 100%;
+  }
+  &-input {
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border: 1px solid lightgray;
+    color: gray;
+    border-radius: 10px;
+    padding: 4px 8px;
+  }
+  .search-svg {
+    width: 25px;
+    height: 25px;
+    float: left;
+    padding-left: 6px;
+  }
+  @include mixsins.response-to("desktop") {
+    width: 30px;
+    overflow: hidden;
+  }
+}

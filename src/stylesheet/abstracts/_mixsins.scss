@@ -1,0 +1,133 @@
+@use "sass:map";
+@use "sass:list";
+
+$breakpoints: (
+  mobile: 600px,
+  tablet: 900px,
+  desktop: 1024px,
+  hd: 1280px,
+  fhd: 1920px,
+  2k: 2560px,
+  4k: 3840px,
+);
+
+$btn-paddings: (
+  xs: (
+    2px 6px,
+    2px 8px,
+    4px 12px,
+    6px 14px,
+    8px 16px,
+    8px 16px,
+    8px 16px,
+  ),
+  sm: (
+    4px 12px,
+    4px 14px,
+    6px 18px,
+    8px 22px,
+    10px 24px,
+    10px 24px,
+    10px 24px,
+  ),
+  md: (
+    6px 12px,
+    8px 14px,
+    10px 18px,
+    12px 22px,
+    14px 24px,
+    14px 24px,
+    14px 24px,
+  ),
+  lg: (
+    12px 20px,
+    14px 24px,
+    16px 28px,
+    18px 32px,
+    21px 36px,
+    21px 40px,
+    21px 48px,
+  ),
+);
+
+$btn-text-size: (
+  xs: (
+    16px,
+    18px,
+    20px,
+    22px,
+    24px,
+    26px,
+    28px,
+  ),
+  sm: (
+    16px,
+    18px,
+    20px,
+    22px,
+    24px,
+    26px,
+    28px,
+  ),
+  md: (
+    16px,
+    18px,
+    20px,
+    22px,
+    24px,
+    26px,
+    28px,
+  ),
+  lg: (
+    16px,
+    18px,
+    20px,
+    22px,
+    24px,
+    26px,
+    28px,
+  ),
+);
+@mixin flex-box($direction: false, $content: false, $aliagn: false, $warp: false, $gap: false) {
+  display: flex;
+
+  @if ($direction) {
+    flex-direction: $direction;
+  }
+  @if ($content) {
+    justify-content: $content;
+  }
+  @if ($aliagn) {
+    align-items: $aliagn;
+  }
+  @if ($warp) {
+    flex-wrap: $warp;
+  }
+  @if ($gap) {
+    gap: $gap;
+  }
+}
+
+@mixin response-to($media) {
+  @media (min-width: map.get($breakpoints, $media)) {
+    @content;
+  }
+}
+
+@mixin set-padding-btn($size) {
+  $breakpoint-keys: map.keys($breakpoints);
+  $padding-values: map.get($btn-paddings, $size);
+  $padding-text: map.get($btn-text-size, $size);
+
+  @for $i from 1 through list.length($breakpoint-keys) {
+    $media: list.nth($breakpoint-keys, $i);
+    $padding: list.nth($padding-values, $i);
+    $text-size: list.nth($padding-text, $i);
+
+    @include response-to($media) {
+      padding: $padding;
+      font-size: $text-size;
+    }
+  }
+}
+

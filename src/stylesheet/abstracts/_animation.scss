@@ -1,0 +1,71 @@
+@keyframes heading {
+  0% , 25%{
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  25%,50% {
+    transform: translateY(20px);
+    opacity: 0.25;
+  }
+  50% , 75% {
+    transform: translateY(10px);
+    opacity: 0.5;
+  }
+  75% ,100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes button {
+  0% , 25%{
+    opacity: 0;
+  }
+  25%,50% {
+    opacity: 0.25;
+  }
+  50% , 75% {
+    opacity: 0.5;
+  }
+  75% ,100% {
+    opacity: 0.75;
+  }
+   100% {
+    opacity: 1;
+  }
+}
+
+@keyframes framer {
+  0%{
+   background-color: rgba(222, 219, 219, 0.4);
+  }
+  15%{
+   background-color: rgba(128, 128, 128 , 0.8);
+  }
+  30%{
+   background-color: rgba(128, 128, 128 , 0.4);
+  }
+  45%{
+   background-color: rgba(128, 128, 128 , 0.8);
+  }
+  60%{
+   background-color: rgba(128, 128, 128 , 0.4);
+  }
+  75%{
+   background-color: rgba(128, 128, 128 , 0.8);
+  }
+  90%{
+   background-color: rgba(128, 128, 128 , 0.4);
+  }
+  100%{
+    background-color: none;
+  }
+}
+@keyframes show-image{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

@@ -1,0 +1,13 @@
+@use '../../abstracts/mixsins';
+
+.popular {
+    width: 100%;
+    padding: 0px 100px;
+    position: relative;
+    @include mixsins.flex-box(column,center ,center,false,88px);
+
+    &-title {
+        display: flex;
+        text-align: center;
+    }
+}

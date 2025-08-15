@@ -1,0 +1,12 @@
+@use '../../abstracts/mixsins';
+@use '../../abstracts/variables';
+
+
+.offer{
+    @include mixsins.flex-box(row, center,center);
+    padding:88px 16px ;
+    &-box{
+        @include mixsins.flex-box(row, center,center,wrap,16px);
+        width: 100%;
+    }
+}

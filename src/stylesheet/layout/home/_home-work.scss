@@ -1,0 +1,24 @@
+@use "../../abstracts/mixsins";
+@use "../../abstracts/variables";
+
+.work {
+  padding: 88px 16px ;
+  background-image: linear-gradient(180deg , rgba(254,215,133,0.25) 0%, rgba(254,222,153 ,0.15) 30% , rgba(254,228,173,0.05) 70% ,rgba(253,237,202,0) 100%);
+  @include mixsins.flex-box(row, center, center);
+
+  &-box {
+    @include mixsins.flex-box(column, center, center,false,71px);
+    &-title {
+      color: variables.$red;
+    }
+
+    &-cards {
+      width: 80%;
+      @include mixsins.flex-box(row, center, center,wrap,16px);
+      @include mixsins.response-to('hd'){
+        flex-wrap: nowrap;
+        gap:32px
+      }
+    }
+  }
+}

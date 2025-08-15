@@ -1,0 +1,100 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixsins";
+@use "../abstracts/animation";
+
+h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 100%;
+  animation: variables.$anim-model ;
+
+  @include mixsins.response-to("tablet") {
+    font-size: 64px;
+  }
+  @include mixsins.response-to("fhd") {
+    font-size: 88px;
+  }
+}
+
+h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 38px;
+  font-weight: variables.$font-weight;
+  line-height: 106%;
+  animation: variables.$anim-model ;
+  @include mixsins.response-to("tablet") {
+    font-size: 48px;
+  }
+  @include mixsins.response-to("fhd") {
+    font-size: 68px;
+  }
+}
+
+h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 27px;
+  font-weight: variables.$font-weight;
+  line-height: 97.5%;
+  animation: variables.$anim-model ;
+  @include mixsins.response-to("tablet") {
+    font-size: 37px;
+  }
+
+  @include mixsins.response-to("fhd") {
+    font-size: 68px;
+  }
+}
+
+h4 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 24px;
+  line-height: 112%;
+  font-weight: variables.$font-weight;
+  animation: variables.$anim-model ;
+  @include mixsins.response-to("tablet") {
+    font-size: 37px;
+  }
+  @include mixsins.response-to("fhd") {
+    font-size: 43px;
+  }
+}
+
+h5 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  line-height: 120%;
+  animation: variables.$anim-model ;
+  font-weight: variables.$font-weight;
+  @include mixsins.response-to("tablet") {
+    font-size: 30px;
+  }
+  @include mixsins.response-to("fhd") {
+    font-size: 35px;
+  }
+}
+h6 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 120%;
+  font-weight: variables.$font-weight;
+  animation: variables.$anim-model ;
+  @include mixsins.response-to("tablet") {
+    font-size: 22px;
+  }
+}
+
+p {
+  font-family: "Open sans", sans-serif;
+  font-size: 10px;
+  line-height: 140%;
+  font-weight: variables.$font-weight;
+  animation: variables.$anim-model ;
+  @include mixsins.response-to("tablet") {
+    font-size: 12px;
+  }
+
+  @include mixsins.response-to("hd") {
+    font-size: 16px;
+  }
+}

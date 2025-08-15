@@ -1,0 +1,84 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixsins";
+@use "sass:map";
+
+$them-color:variables.$them-color;
+
+button {
+  
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding: 16px 8px;
+  font-weight: 700;
+  line-height: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 200ms ease-in;
+  animation: button 1500ms  cubic-bezier(.08,.61,.75,.83) forwards;
+
+  @include mixsins.set-padding-btn("lg");
+
+  :nth-child(1) {
+    border-radius: 10px;
+  }
+
+  &-search {
+    margin-top: 6px;
+  }
+}
+.find-btn {
+  background-color: map.get($them-color, warning);
+  color: white;
+}
+.btn-delivery {
+  background-color: variables.$warning;
+  color: map.get($them-color, warning);
+}
+.btn-pickup {
+  color: variables.$gray-600;
+}
+.btn-login {
+  width: auto;
+  background-image: map.get(variables.$gradient, yellow-to-orange);
+  background-clip: text;
+  color: transparent;
+  @include mixsins.set-padding-btn("lg");
+  &:hover {
+    box-shadow: variables.$shadow-yellows;
+  }
+}
+.button-search{
+  padding: 4px;
+  display: block;
+  width: auto;
+}
+.button-remaining{
+  color: map.get($them-color, warning);
+  background-color: variables.$warning;
+  width: auto;
+  @include mixsins.set-padding-btn("xs");
+  
+}
+
+.slider-item-left , .slider-item-right {
+  width: auto;
+  padding: 10px 16px;
+  border-radius: 100%;
+  font-size: 24px;
+  background-color: variables.$yellow;
+  border : 1px solid #FAAA01; 
+  transition: 100ms ease-in;
+  color:white;
+  
+  &:hover{
+    box-shadow: variables.$shadow-yellows;
+  }
+}
