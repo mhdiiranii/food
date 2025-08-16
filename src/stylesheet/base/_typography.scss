@@ -79,7 +79,7 @@ h6 {
   line-height: 120%;
   font-weight: variables.$font-weight;
   animation: variables.$anim-model ;
-  @include mixsins.response-to("tablet") {
+  @include mixsins.response-to("fhd") {
     font-size: 22px;
   }
 }

@@ -8,7 +8,7 @@
 
   &-box {
     width: 100%;
-    padding: 0px 120px;
+    padding: 80px 120px;
     @include mixsins.flex-box(row, center, center, false, 16px);
   }
 

@@ -1,0 +1,17 @@
+@use "../../abstracts/mixsins";
+@use "../../abstracts/variables";
+
+.featured {
+  @include mixsins.flex-box(column, center, center,false,88px);
+
+  &-box {
+    @include mixsins.flex-box(row, center, center);
+    &-grid {
+      width: 80%;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: 64px 16px;
+      // display: ;
+    }
+  }
+}

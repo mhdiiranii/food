@@ -33,8 +33,9 @@ $btn-padding: (
 }
 //#color --------
 $red: #f17228;
+$orange : rgba(241, 114, 40,0.2);
 $yellow: #ffb20e;
-$green: #79b93c;
+$light-green: rgba(121, 185, 60,0.2);
 $White-floral: #fefaf1;
 $lighte-orange: #feefd0;
 $gray-500: #9e9e9e;
@@ -44,7 +45,7 @@ $sahdow-yellow: #ffb30e;
 $warning: rgba(241, 114, 40, 10%);
 
 //# sahdow
-$shadow-yellows: 0px 0px 20px 0 rgba(255, 175, 23,0.9);
+$shadow-yellows: 0px 4px 20px 0 rgba(255, 175, 23,0.9);
 
 //# gradient color
 $gradient: (
@@ -52,6 +53,7 @@ $gradient: (
   pink-to-red: linear-gradient(110deg, #ff7a7a, #f65900),
   red-to-yellow: linear-gradient(130deg, #fb3c00, #ffb800),
   yellow-to-white: linear-gradient(180deg, #ffce67, #fdedca),
+  view: linear-gradient(110deg, #FFBA26, #FF9A0E),
 );
 
 //# them color
