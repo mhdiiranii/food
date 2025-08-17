@@ -36,6 +36,7 @@ button {
 .find-btn {
   background-color: map.get($them-color, warning);
   color: white;
+  @include mixsins.set-padding-btn('lg')
 }
 .btn-delivery {
   background-color: variables.$warning;
@@ -165,4 +166,37 @@ button {
   &:hover {
     box-shadow: variables.$shadow-yellows;
   }
+}
+
+.button-store{
+  height: 60px;
+  width: auto;
+  padding: 10px 15px ;
+  background-color: white;
+  transition: 200ms ease-in;
+
+  &-box{
+    padding-left: 5px;
+   @include mixsins.flex-box(column, start, start );
+   &-p1{
+    color: variables.$gray-700;
+    font-weight: 400;
+    font-size: 12px;
+   }
+   &-p2{
+    color: variables.$gray-900;
+    font-weight: 500;
+    font-size: 16px;
+   }
+  }
+  &:hover {
+    box-shadow: variables.$shadow-yellows;
+  }
+}
+
+.button-details{
+  background-image: map.get(variables.$gradient,install);
+  color: white;
+  text-transform: uppercase;
+  @include mixsins.set-padding-btn('lg')
 }

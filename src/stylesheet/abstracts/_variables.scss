@@ -41,7 +41,9 @@ $White-floral: #fefaf1;
 $lighte-orange: #feefd0;
 $gray-500: #9e9e9e;
 $gray-600: #757575;
+$gray-700: #616161;
 $gray-800: #424242;
+$gray-900: #212121;
 $sahdow-yellow: #ffb30e;
 $warning: rgba(241, 114, 40, 10%);
 
@@ -55,6 +57,7 @@ $gradient: (
   red-to-yellow: linear-gradient(130deg, #fb3c00, #ffb800),
   yellow-to-white: linear-gradient(180deg, #ffce67, #fdedca),
   view: linear-gradient(110deg, #FFBA26, #FF9A0E),
+  install: linear-gradient(110deg, #FFB800, #FF8A00),
 );
 
 //# them color

@@ -48,7 +48,11 @@
       background-color: white;
       border-radius: 46px;
       box-shadow: 0 20px 40px 0 rgba(255, 174, 0, 0.3 );
-      @include mixsins.flex-box(row, center, center);
+      @include mixsins.flex-box(column, center, center);
+
+      @include mixsins.response-to("hd"){
+        @include mixsins.flex-box(row, center, center,wrap);
+      }
     }
   }
 

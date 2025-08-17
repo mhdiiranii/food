@@ -1,0 +1,48 @@
+@use "../../abstracts/mixsins";
+@use "../../abstracts/variables";
+@use "sass:map";
+
+.app-dw {
+  padding-top: 75px;
+  background-color: variables.$cream;
+  position: relative;
+  @include mixsins.flex-box(column-reverse, center, center, wrap);
+
+  &-title {
+    width: 60%;
+    @include mixsins.flex-box(column, center, start, false, 16px);
+
+    &-h2 {
+      background-image: map.get(variables.$gradient, install);
+      background-clip: text;
+      color: transparent;
+    }
+
+    &-p {
+      width: 100%;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    &-store {
+      @include mixsins.flex-box(row, center, center, false, 10px);
+    }
+    @include mixsins.response-to("hd") {
+      width: 30%;
+      @include mixsins.flex-box(column, center, start, false, 16px);
+    }
+  }
+  &-img {
+    width: 70%;
+    z-index: 1;
+    @include mixsins.response-to("hd") {
+      width: auto;
+    }
+  }
+  & svg {
+    position: absolute;
+    bottom: 0;
+  }
+  @include mixsins.response-to("hd") {
+    @include mixsins.flex-box(row, center, center, wrap);
+  }
+}

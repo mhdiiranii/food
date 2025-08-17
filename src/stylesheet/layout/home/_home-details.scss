@@ -1,0 +1,16 @@
+@use '../../abstracts/mixsins';
+@use '../../abstracts/variables';
+
+.details{
+    width: 100%;
+    padding: 135px 0;
+    @include mixsins.flex-box(row,center,center,false);
+    &-box{
+        width: auto;
+        @include mixsins.flex-box(column,center,start,false,80px);
+        &-item {
+            width: 100%;
+            @include mixsins.flex-box(row,center,center,false);
+        }
+    }
+}

@@ -126,14 +126,53 @@
   @include mixsins.flex-box(row, start, center);
 
   & img {
-    width: 10vh;
+    width: 5vh;
+
+    @include mixsins.response-to("tablet") {
+      width: 10vh;
+    }
   }
 
   &-title {
     & h5 {
       background-image: map.get(variables.$gradient, red-to-yellow);
-       background-clip: text;
-       color: transparent;
+      background-clip: text;
+      color: transparent;
     }
+  }
+}
+
+.card-details {
+  width: 80%;
+  box-shadow: 0 27px 82px 0 rgba(124, 124, 124, 0.28);
+  border-radius: 16px;
+  @include mixsins.flex-box(column, center, center, false);
+
+  &-img {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    width: 100%;
+    @include mixsins.response-to("fhd") {
+      width: 60%;
+    }
+  }
+
+  &-box {
+    width: 100%;
+    padding: 56px;
+    @include mixsins.flex-box(column, start, end, false, 48px);
+
+    &-title {
+      & p {
+        color: rgba(95, 95, 95, 0.6);
+        padding-top: 16px;
+      }
+    }
+    @include mixsins.response-to("fhd") {
+      width: 40%;
+    }
+  }
+  @include mixsins.response-to("fhd") {
+    flex-direction: row;
   }
 }
