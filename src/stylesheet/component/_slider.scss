@@ -9,7 +9,7 @@
   &-box {
     width: 100%;
     padding: 80px 120px;
-    @include mixsins.flex-box(row, center, center, false, 16px);
+    @include mixsins.flex-box(row, center, center, wrap, 16px);
   }
 
   &-btn {
@@ -23,5 +23,5 @@
 }
 
 .items {
-  width: 100%;
+  width: 20vh;
 }

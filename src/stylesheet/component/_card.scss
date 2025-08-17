@@ -103,11 +103,37 @@
         & h6 {
           font-size: 18px;
           font-weight: 400;
-          color: map.get(variables.$them-color,primary);
+          color: map.get(variables.$them-color, primary);
         }
       }
     }
   }
   &-btn {
+  }
+}
+.search-item {
+  width: 100%;
+  @include mixsins.flex-box(column, center, center, wrap, 10px);
+
+  & img {
+    width: 100%;
+    border-radius: 100%;
+  }
+}
+
+.search-features-box {
+  padding: 55px;
+  @include mixsins.flex-box(row, start, center);
+
+  & img {
+    width: 10vh;
+  }
+
+  &-title {
+    & h5 {
+      background-image: map.get(variables.$gradient, red-to-yellow);
+       background-clip: text;
+       color: transparent;
+    }
   }
 }

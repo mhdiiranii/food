@@ -51,7 +51,7 @@ button {
   color: transparent;
   @include mixsins.set-padding-btn("lg");
   &:hover {
-    box-shadow: variables.$shadow-yellows;
+    box-shadow: variables.$shadow-yellows;  
   }
 }
 .button-search {
@@ -145,13 +145,24 @@ button {
 .button-view {
   width: auto;
   font-size: 14px;
-  background-image: map.get(variables.$gradient,view);
+  background-image: map.get(variables.$gradient, view);
   color: white;
   @include mixsins.set-padding-btn("lg");
   &:hover {
     box-shadow: variables.$shadow-yellows;
   }
-  @include mixsins.response-to('fhd'){
+  @include mixsins.response-to("fhd") {
     padding: 21px 48px;
+  }
+}
+
+.button-view-search {
+  width: auto;
+  color: map.get(variables.$them-color, primary);
+  margin-right: 14px;
+  @include mixsins.set-padding-btn("xs");
+
+  &:hover {
+    box-shadow: variables.$shadow-yellows;
   }
 }

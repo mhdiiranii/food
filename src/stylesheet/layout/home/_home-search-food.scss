@@ -1,0 +1,58 @@
+@use "../../abstracts/mixsins";
+@use "../../abstracts/variables";
+
+.search-food {
+  width: 100%;
+  margin-top: 80px;
+
+  .part-one {
+    background-color: variables.$White-floral;
+    padding: 82px 16px 55px 16px;
+    @include mixsins.flex-box(column, center, center, false, 10px);
+
+    &-top {
+      width: 100%;
+      @include mixsins.flex-box(column, center, start, false, 20px);
+
+      &-btn {
+        width: 100%;
+        @include mixsins.flex-box(row, space-between, center, false);
+
+        .button {
+          @include mixsins.flex-box(row, center, center, false, 10px);
+        }
+        @include mixsins.response-to("tablet") {
+          width: auto;
+          justify-content: center;
+        }
+      }
+      @include mixsins.response-to("tablet") {
+        @include mixsins.flex-box(row, space-around, center);
+      }
+    }
+
+    &-slide {
+      padding: 0px;
+      gap: 20px;
+    }
+  }
+
+  .part-two {
+    width: 100%;
+    background-color: variables.$cream;
+    padding: 130px 16px 80px 16px;
+    @include mixsins.flex-box(row, center, center);
+
+    &-features {
+      width: auto;
+      background-color: white;
+      border-radius: 46px;
+      box-shadow: 0 20px 40px 0 rgba(255, 174, 0, 0.3 );
+      @include mixsins.flex-box(row, center, center);
+    }
+  }
+
+  @include mixsins.response-to("tablet") {
+    gap: 88px;
+  }
+}

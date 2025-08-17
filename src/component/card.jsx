@@ -3,7 +3,27 @@ import map from "../assets/nav/map-marker.svg";
 import star from "../assets/featured/star-icon.svg";
 import clouck from "../assets/featured/time.svg";
 
-const Card = ({ type, src, name, remaining, off = false, discount = "?", about = "", loc = "", price = "", featuredOffer, timeing, resturantIcon, resturantName, startRate, cheack, cheackTitle }) => {
+const Card = ({ 
+  type, 
+  src, 
+  name, 
+  remaining, 
+  off = false, 
+  discount = "?", 
+  about = "", 
+  loc = "", 
+  price = "", 
+  featuredOffer, 
+  timeing, 
+  resturantIcon, 
+  resturantName, 
+  startRate, 
+  cheack, 
+  cheackTitle,
+  partOne,
+  partTwo
+}) => {
+
   if (type == "offer") {
     return (
       <div className="card">
@@ -69,12 +89,31 @@ const Card = ({ type, src, name, remaining, off = false, discount = "?", about =
             <h6 className="featured-card-about-title-h6">{resturantName}</h6>
             <div className="featured-card-about-title-star">
               <img src={star} alt="star" />
-              <h6>{startRate}</h6> 
+              <h6>{startRate}</h6>
             </div>
           </div>
         </div>
         <div>
           <Button className={`button-cheack-${cheack}`}>{cheackTitle}</Button>
+        </div>
+      </div>
+    );
+  }
+  if (type == "search-item") {
+    return (
+      <div className="search-item">
+        <img src={src} alt="image" />
+        <h6>{name}</h6>
+      </div>
+    );
+  }
+  if (type == "search-features") {
+    return (
+      <div className="search-features-box">
+        <img src={src} alt="image" />
+        <div className="search-features-box-title">
+          <h5>{partOne}</h5>
+          <h5>{partTwo}</h5>
         </div>
       </div>
     );
