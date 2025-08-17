@@ -1,5 +1,24 @@
+@use '../../../abstracts/variables';
+@use '../../../abstracts/mixsins';
+
 .cta{
     background-image: url('../../../../assets/cta/one.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    position: relative;
+    @include mixsins.flex-box(row,center,center);
+    padding: 91px 16px 75px 16px;
+
+    &-box{
+        width: 100%;
+        @include mixsins.flex-box(column,center,center);
+        &-h3{
+            margin-bottom: 62px;
+            color: white;
+            width: 30%;
+            text-align: center;
+        }
+    }
+    
+
 }

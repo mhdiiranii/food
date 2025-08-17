@@ -200,3 +200,10 @@ button {
   text-transform: uppercase;
   @include mixsins.set-padding-btn('lg')
 }
+
+.button-cta{
+  width: auto;
+  color: white;
+  background-image: map.get(variables.$gradient,cta);
+  @include mixsins.set-padding-btn('lg')
+}
