@@ -1,8 +1,8 @@
-@use "../../abstracts/mixsins";
-@use "../../abstracts/variables";
+@use "../../../abstracts/mixsins";
+@use "../../../abstracts/variables";
 
 .header {
-  background-image: url("../../../assets/header/header.png");
+  background-image: url("../../../../assets/header/header.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: relative;

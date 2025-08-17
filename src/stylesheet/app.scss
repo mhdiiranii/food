@@ -2,21 +2,13 @@
 @use '../stylesheet/base/typography';
 @use '../stylesheet/abstracts/mixsins';
 @use '../stylesheet/component/button';
-@use '../stylesheet/layout/home/home-nav';
 @use '../stylesheet/base/base';
 @use '../stylesheet/component/search';
-@use '../stylesheet/layout/home/home-header';
 @use "../stylesheet/abstracts/animation";
-@use "../stylesheet/layout/home/home-offer";
 @use "../stylesheet/component/card";
-@use "../stylesheet/layout/home/home-work";
-@use "../stylesheet/layout/home/home-popular";
 @use "../stylesheet/component/slider";
-@use "../stylesheet//page/home";
-@use "../stylesheet/layout/home/home-featured";
-@use "../stylesheet/layout/home/home-search-food";
-@use "../stylesheet/layout/home/home-appDw";
-@use "../stylesheet/layout/home/home-details";
+@use "../stylesheet/page/home";
+@use "../stylesheet/layout/home/home-layouts";
 @use "sass:map";
 
 

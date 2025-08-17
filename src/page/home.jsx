@@ -7,6 +7,7 @@ import Featured from "../component/home-layout/featured";
 import SearchFood from "../component/home-layout/searchFood";
 import AppDw from "../component/home-layout/app-download";
 import Details from "../component/home-layout/details";
+import Cta from "../component/home-layout/cta";
 
 const Home = () => {
     return ( 
@@ -20,6 +21,7 @@ const Home = () => {
             <SearchFood/>
             <AppDw/>
             <Details/>
+            <Cta/>
         </div>
      );
 }
