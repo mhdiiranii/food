@@ -1,13 +1,14 @@
 import hamburger from '../../assets/nav/borger-icon.svg'
 import mapMarker from '../../assets/nav/map-marker.svg'
 import Button from '../button';
+import Images from '../image';
 import Search from '../search';
 
 const Nav = () => {
   return (
     <div className="nav">
       <div className="nav-icon">
-        <img src={hamburger} alt="borger" className='image'/>
+        <Images src={hamburger} alt="borger" className='image'/>
         <div className='caption'>
             <h6>
                 food
@@ -19,7 +20,7 @@ const Nav = () => {
       </div>
       <div className="nav-title">
         <p>Deliver to:</p>
-        <img src={mapMarker} alt="map" className='map-image' />
+        <Images src={mapMarker} alt="map" className='map-image'/>
         <p>Current Location</p>
         <p>Mohammadpur Bus Stand, Dhaka</p>
       </div>

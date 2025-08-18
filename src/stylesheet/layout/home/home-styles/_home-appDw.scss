@@ -38,6 +38,11 @@
       width: auto;
     }
   }
+  &-loader{
+    width: 500px;
+    height: 500px;
+    margin-right: 40px;
+  }
   & svg {
     position: absolute;
     bottom: 0;

@@ -2,6 +2,7 @@ import Button from "../button";
 import one from "../../assets/footer/1.svg";
 import two from "../../assets/footer/2.svg";
 import three from "../../assets/footer/3.svg";
+import Images from "../image";
 
 const citys = [
   {
@@ -159,7 +160,6 @@ const legals = [
   },
 ];
 
-
 const Footer = () => {
   return (
     <div className="footer">
@@ -212,9 +212,9 @@ const Footer = () => {
         <div className="footer-bottom-follow">
           <h6>Follow Us</h6>
           <div className="footer-bottom-follow-icons">
-            <img src={one} alt="image" width={20} height={20}/>
-            <img src={two} alt="image" width={20} height={20}/>
-            <img src={three} alt="image" width={20} height={20}/>
+            <Images src={one} alt="image" width={20} height={20} />
+            <Images src={two} alt="image" width={20} height={20} />
+            <Images src={three} alt="image" width={20} height={20} />
           </div>
           <p>Receive exclusive offers in your mailbox</p>
           <div className="footer-bottom-follow-sub">

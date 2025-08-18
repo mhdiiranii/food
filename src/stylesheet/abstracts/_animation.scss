@@ -37,28 +37,28 @@
 
 @keyframes framer {
   0%{
-   background-color: rgba(222, 219, 219, 0.4);
+  opacity: 0.5;
   }
   15%{
-   background-color: rgba(128, 128, 128 , 0.8);
+  opacity: 0.7;
   }
   30%{
-   background-color: rgba(128, 128, 128 , 0.4);
+  opacity: 0.5;
   }
   45%{
-   background-color: rgba(128, 128, 128 , 0.8);
+  opacity: 0.7;
   }
   60%{
-   background-color: rgba(128, 128, 128 , 0.4);
+  opacity: 0.5;
   }
   75%{
-   background-color: rgba(128, 128, 128 , 0.8);
+  opacity: 0.7;
   }
   90%{
-   background-color: rgba(128, 128, 128 , 0.4);
+  opacity: 0.5;
   }
   100%{
-    background-color: none;
+    opacity: 0.7;
   }
 }
 @keyframes show-image{

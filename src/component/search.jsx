@@ -1,11 +1,12 @@
 import Button from '../component/button'
 import SearchSvg from '../assets/Search.svg'
+import Images from './image';
 
 const Search = () => {
     return ( 
         <div className="search">
             <Button className={'button-search'}>
-                <img src={SearchSvg} alt="search" className='search-svg' />
+                <Images src={SearchSvg} alt="search" className='search-svg'/>
             </Button>
             <input type="text" className="search-input" />
         </div>

@@ -21,6 +21,10 @@
   &-box-image {
     width: 100%;
   }
+  &-box-loader {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .work-card {
@@ -29,17 +33,13 @@
 
   &-frame {
     position: relative;
-    &-animation {
-      position: absolute;
-      border-radius: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      animation: framer 2s ease-in forwards;
-    }
+
     &-image {
       animation: show-image 2s steps(1) forwards;
+    }
+    &-loader {
+      width: 200px;
+      height: 200px;
     }
   }
 
@@ -57,11 +57,19 @@
   &-image {
     width: 100%;
   }
+  &-loader {
+    width: 150px;
+    height: 150px;
+  }
   &-loc {
     @include mixsins.flex-box(row, start, center, false, 5px);
     h6 {
       color: map.get(variables.$them-color, primary);
       font-weight: 400;
+    }
+    &-loader {
+      width: 15px;
+      height: 15px;
     }
   }
 }
@@ -86,12 +94,19 @@
       height: 300px;
       border-radius: 10px;
     }
+    &-loader {
+      width: 275px;
+      height: 300px;
+    }
   }
   &-about {
     width: 100%;
     padding: 24px 0px 32px 0;
     @include mixsins.flex-box(row, start, center, false, 10px);
-
+    &-loader {
+      width: 50px;
+      height: 50px;
+    }
     &-title {
       &-star {
         @include mixsins.flex-box(row, start, center, false, 5px);
@@ -111,6 +126,7 @@
   &-btn {
   }
 }
+
 .search-item {
   width: 100%;
   @include mixsins.flex-box(column, center, center, wrap, 10px);
@@ -118,6 +134,10 @@
   & img {
     width: 100%;
     border-radius: 100%;
+  }
+  &-loader{
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -131,6 +151,11 @@
     @include mixsins.response-to("tablet") {
       width: 10vh;
     }
+  }
+
+  &-loader{
+    width: 100px;
+    height: 100px;
   }
 
   &-title {
@@ -155,6 +180,11 @@
     @include mixsins.response-to("fhd") {
       width: 60%;
     }
+  }
+
+  &-loader {
+    width: 100%;
+    height: 410px;
   }
 
   &-box {

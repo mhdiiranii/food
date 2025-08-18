@@ -1,6 +1,12 @@
 import Button from "../../component/button";
 import food from "../../assets/header/food-header.png";
+import { lazy, Suspense } from "react";
+// import Images from "../image";
+import RenderImage from '../render-image'
 
+
+const Images = lazy(()=> import('../image'))
+ 
 const Header = () => {
   return (
     <div className="header">
@@ -17,14 +23,17 @@ const Header = () => {
           <span className="span"></span>
           <div className="find">
             <input type="text" placeholder="Enter Your Address" className="find-input"/>
-            {/* <img src={food} alt="food" /> */}
             <div className="find-box">
               <Button className={'find-btn'}>Find Food</Button>
             </div>
           </div>
         </div>
       </div>
-      <img src={food} alt="food" className="header-food-image" />
+      {/* <Suspense className fallback = {<div>loading........</div>}>
+        <Images src={food} alt="food" className="header-food-image"/>
+      </Suspense> */}
+      <RenderImage src={food} alt="food" className="header-food-image" loaderStyle={'header-food-loader'}/>
+      
     </div>
   );
 };

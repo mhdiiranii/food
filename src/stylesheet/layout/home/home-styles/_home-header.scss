@@ -99,6 +99,7 @@
       width: auto;
     }
   }
+
   @include mixsins.response-to("tablet") {
     padding: 60px 146px;
   }

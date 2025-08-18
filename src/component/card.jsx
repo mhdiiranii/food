@@ -2,6 +2,8 @@ import Button from "../component/button";
 import map from "../assets/nav/map-marker.svg";
 import star from "../assets/featured/star-icon.svg";
 import clouck from "../assets/featured/time.svg";
+import Images from "./image";
+import RenderImage from "./render-image";
 
 const Card = ({
   type,
@@ -24,6 +26,7 @@ const Card = ({
   partTwo,
   captions,
 }) => {
+
   if (type == "offer") {
     return (
       <div className="card">
@@ -33,7 +36,7 @@ const Card = ({
               <h2>{discount}</h2>
             </div>
           )}
-          <img src={src} alt="#" className="card-box-image" />
+          <RenderImage src={src} alt="#" className="card-box-image" loaderStyle={'card-box-loader'}/>
         </div>
         <h6>{name}</h6>
         <Button className={"button-remaining"}>{remaining}</Button>
@@ -45,8 +48,7 @@ const Card = ({
     return (
       <div className="work-card">
         <div className="work-card-frame">
-          <div className="work-card-frame-animation"></div>
-          <img src={src} alt="#" className="work-card-frame-image" />
+          <RenderImage src={src} alt="#" className="work-card-frame-image" loaderStyle={'work-card-frame-loader'}/>
         </div>
         <h6 className="work-card-title">{name}</h6>
         <p className="work-card-about">{about}</p>
@@ -57,10 +59,10 @@ const Card = ({
   if (type == "popular-item") {
     return (
       <div className="popular-item">
-        <img src={src} alt="#" className="popular-item-image" />
+        <RenderImage src={src} alt="#" className="popular-item-image" loaderStyle={'popular-item-loader'}/>
         <h6>{name}</h6>
-        <div className="popular-item-loc  ">
-          <img src={map} alt="map" />
+        <div className="popular-item-loc">
+          <RenderImage src={map} alt="map" loaderStyle={'popular-item-loc-loader'}/>
           <h6>{loc}</h6>
         </div>
         <h6>{price}</h6>
@@ -77,19 +79,19 @@ const Card = ({
             <Button className="btn-offer">{featuredOffer}</Button>
             <Button className={"btn-time"}>
               <div className="box">
-                <img src={clouck} alt="clouck" />
+                <RenderImage src={clouck} alt="clouck" loaderStyle={'box-loader'}/>
                 <h6>{timeing}</h6>
               </div>
             </Button>
           </div>
-          <img src={src} alt="" className="featured-card-image-image" />
+          <RenderImage src={src} alt="" className="featured-card-image-image" loaderStyle={'featured-card-image-loader'}/>
         </div>
         <div className="featured-card-about">
-          <img src={resturantIcon} alt="" className="featured-card-about-icon" />
+          <RenderImage src={resturantIcon} alt="" className="featured-card-about-icon" loaderStyle={'featured-card-about-loader'}/>
           <div className="featured-card-about-title">
             <h6 className="featured-card-about-title-h6">{resturantName}</h6>
             <div className="featured-card-about-title-star">
-              <img src={star} alt="star" />
+              <RenderImage src={star} alt="star" loaderStyle={'featured-card-about-title-star-loader'}/>
               <h6>{startRate}</h6>
             </div>
           </div>
@@ -104,7 +106,7 @@ const Card = ({
   if (type == "search-item") {
     return (
       <div className="search-item">
-        <img src={src} alt="image" />
+        <RenderImage src={src} alt="image" loaderStyle={'search-item-loader'}/>
         <h6>{name}</h6>
       </div>
     );
@@ -113,7 +115,7 @@ const Card = ({
   if (type == "search-features") {
     return (
       <div className="search-features-box">
-        <img src={src} alt="image" />
+        <RenderImage src={src} alt="image" loaderStyle={'search-features-box-loader'}/>
         <div className="search-features-box-title">
           <h5>{partOne}</h5>
           <h5>{partTwo}</h5>
@@ -125,7 +127,7 @@ const Card = ({
   if (type == "details") {
     return (
       <div className="card-details">
-        <img src={src} alt="image" className="card-details-img" />
+        <RenderImage src={src} alt="image" className="card-details-img" loaderStyle={'card-details-loader'}/>
         <div className="card-details-box">
           <div className="card-details-box-title">
             <h4>{captions}</h4>
