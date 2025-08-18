@@ -207,3 +207,9 @@ button {
   background-image: map.get(variables.$gradient,cta);
   @include mixsins.set-padding-btn('lg')
 }
+
+.button-footer{
+  background-image: map.get(variables.$gradient,install);
+  color: white;
+  @include mixsins.set-padding-btn('lg')
+}

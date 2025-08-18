@@ -1,0 +1,98 @@
+@use "../../../abstracts/mixsins";
+@use "../../../abstracts/variables";
+
+.footer {
+  width: 100%;
+  background-color: variables.$gray-900;
+  padding: 100px 0px;
+  color: white;
+  @include mixsins.flex-box(column, center, center);
+
+  &-top {
+    width: 80%;
+    @include mixsins.flex-box(column, start, start, false, 40px);
+
+    &-h6 {
+      font-weight: 700;
+    }
+
+    &-citys {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 10px;
+      &-link {
+        color: variables.$gray-100;
+        font-weight: 200;
+        font-family: monospace;
+        text-decoration: none;
+      }
+
+      @include mixsins.response-to("tablet") {
+        grid-template-columns: auto auto auto;
+      }
+      @include mixsins.response-to("hd") {
+        grid-template-columns: auto auto auto auto;
+      }
+      @include mixsins.response-to("fhd") {
+        grid-template-columns: auto auto auto auto auto;
+      }
+    }
+  }
+  &-bottom {
+    width: 80%;
+    margin: 115px 0px 69px 0;
+    padding: 63px 0px;
+    border-top: 2px solid variables.$gray-800;
+    border-bottom: 2px solid variables.$gray-800;
+    @include mixsins.flex-box(row, space-between, center, wrap, 40px);
+
+    &-menu {
+      @include mixsins.flex-box(row, start, center);
+      &-heading {
+        @include mixsins.flex-box(row, start, start, false, 15px);
+        &-ds {
+          @include mixsins.flex-box(column, start, start, false, 40px);
+          & h3 {
+            font-size: 14px;
+          }
+          &-item {
+            width: 100%;
+            @include mixsins.flex-box(column, start, start, false, 16px);
+          }
+        }
+        @include mixsins.response-to("tablet") {
+            gap: 30px;
+        }
+         @include mixsins.response-to("hd") {
+            gap: 60px;
+        }
+         @include mixsins.response-to("fhd") {
+            gap: 88px;
+        }
+      }
+    }
+
+    &-follow {
+      @include mixsins.flex-box(column, start, start, false, 20px);
+      &-icons {
+        @include mixsins.flex-box(row, start, center, false, 10px);
+      }
+
+      &-sub {
+        @include mixsins.flex-box(row, start, center, false, 16px);
+        & input {
+          background-color: variables.$gray-800;
+          color: #adadad;
+          outline: none;
+          border : none;
+          border-radius: 12px;
+          padding: 14px;
+          ::placeholder {
+            color: #adadad;
+          }
+        }
+      }
+    }
+  }
+}
